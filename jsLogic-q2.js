@@ -14,15 +14,18 @@
 
 //another try
 const array = [1, 2, 3, 4, 5, 6];
+const solution = [];
 const answer = (arr, target) => {
-    for(let i = 0; i < arr.length; i++) {
-        let num = arr.indexOf(target - arr[i])
-        if(num !== -1) {
-            return [i, num];
+    for(let i = 0; i <= arr.length; i++) {
+        for(let j = 0; j <= arr.length; j++){
+            if((arr[i] + arr[j]) === target){
+                solution.push(arr[i], arr[j])
+                console.log(solution);
+            }
         }
     }
 };
-answer(...array, 7);
+answer(array, 7);
 
 
 //Question 2: Write a javascript function that takes an array of numbers and a target number.
